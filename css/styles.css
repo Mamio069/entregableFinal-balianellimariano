@@ -1,0 +1,303 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+:root {
+  --color-primario: #2c3e50;
+  --color-secundario: #2980b9;
+  --color-fondo: #f8f4f4;
+  --color-claro: #ffffff;
+  --color-acento: #e67e22;
+  --sombra: 0 4px 12px rgba(0, 0, 0, 0.08);
+  --radio: 10px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: var(--color-fondo);
+  color: var(--color-primario);
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 30px 20px;
+  line-height: 1.6;
+}
+
+/*  Header y Footer  */
+header,
+footer {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+
+
+.logoContainer {
+  background-color: #315374;
+  color: white;
+  padding: 20px;
+  display: flex;
+  align-items: center; 
+  justify-content: space-between; 
+  position: relative; 
+}
+
+.logoContainer h1 {
+  margin: 0;
+}
+
+header p {
+  font-size: 1.2em;
+  color: #666;
+  margin-top: 8px;
+}
+
+
+
+footer {
+  border-top: 1px solid #ccc;
+  padding-top: 20px;
+  font-size: 0.95em;
+  color: #888;
+  margin-top: 50px;
+}
+
+/*  Principal  */
+main {
+  display: flex;
+  gap: 40px;
+  flex-wrap: wrap;
+  align-items: flex-start;
+}
+
+.productos {
+  flex: 1 1 60%;
+}
+
+.carrito {
+  flex: 1 1 35%;
+  background-color: var(--color-claro);
+  border-radius: var(--radio);
+  padding: 24px;
+  box-shadow: var(--sombra);
+  position: sticky;
+  top: 20px;
+  max-height: 600px;
+  overflow-y: auto;
+}
+
+/*  Productos  */
+.grid-productos {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 24px;
+}
+
+.producto {
+  background-color: var(--color-claro);
+  padding: 20px;
+  border-radius: var(--radio);
+  box-shadow: var(--sombra);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  text-align: center;
+}
+
+.producto h3 {
+  font-size: 1.2em;
+  margin-bottom: 8px;
+}
+
+.producto p {
+  font-size: 1em;
+  margin-bottom: 12px;
+  color: #555;
+}
+
+.producto:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+}
+
+/* Carrito */
+.carrito h2 {
+  font-size: 1.5em;
+  margin-bottom: 16px;
+}
+
+.carrito-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px dashed #ccc;
+  padding: 10px 0;
+}
+
+.carrito-item:last-child {
+  border-bottom: none;
+}
+
+#total {
+  font-weight: 600;
+  font-size: 1.2em;
+  margin-top: 16px;
+}
+
+/* Botones */
+button {
+  padding: 10px 18px;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  border-radius: var(--radio);
+  transition: all 0.3s ease;
+  font-size: 0.95em;
+}
+
+button:hover {
+  transform: translateY(-2px);
+}
+
+.producto button {
+  background-color: var(--color-secundario);
+  color: #fff;
+}
+
+.producto button:hover {
+  background-color: #1f6aa5;
+}
+
+.btn-vaciar {
+  background-color: var(--color-acento);
+  color: #fff;
+  margin-top: 20px;
+  width: 100%;
+}
+
+.btn-vaciar:hover {
+  background-color: #cf5e00;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  main {
+    flex-direction: column;
+  }
+
+  .carrito {
+    position: static;
+    max-height: none;
+    margin-top: 30px;
+  }
+}
+
+.producto-img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.logoVenice {
+width: 150px;
+height: 100px;
+}
+
+/* Fuente y colores base */
+body {
+  font-family: 'Montserrat', sans-serif;
+  background: #f8f9fa;
+  color: #343a40;
+  margin-bottom: 80px; 
+}
+
+/* Título contacto */
+.contacto h1 {
+  text-align: center;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  font-weight: 700;
+  letter-spacing: 3px;
+  color: #2c3e50;
+  text-transform: uppercase;
+}
+
+/* Estilo formulario */
+form {
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  max-width: 700px;
+  margin: 0 auto 3rem auto;
+}
+
+/* Labels */
+label {
+  font-weight: 600;
+  color: #495057;
+}
+
+/* Inputs y textarea */
+input.form-control,
+textarea.form-control {
+  border-radius: 8px;
+  border: 1.5px solid #ced4da;
+  transition: border-color 0.3s ease;
+}
+
+input.form-control:focus,
+textarea.form-control:focus {
+  border-color: #6c757d;
+  box-shadow: 0 0 6px rgba(108, 117, 125, 0.3);
+}
+
+/* Botón enviar */
+.btn-secondary {
+  background-color: #2c3e50;
+  border: none;
+  padding: 0.75rem 2rem;
+  font-weight: 600;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+}
+
+.btn-secondary:hover {
+  background-color: #1a2733;
+}
+
+/* Footer fijo */
+.footer {
+  background: #2c3e50;
+  color: #f8f9fa;
+  text-align: center;
+  padding: 1rem 0;
+  font-size: 0.9rem;
+   width: 100%;
+  bottom: 0;
+  left: 0;
+  z-index: 999;
+}
+
+.footer a {
+  color: #f8f9fa;
+  text-decoration: none;
+  font-weight: 600;
+  margin-right: 1rem;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive padding para formulario */
+@media (max-width: 576px) {
+  form {
+    padding: 1rem;
+    margin-bottom: 5rem;
+  }
+}
