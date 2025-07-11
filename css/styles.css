@@ -294,10 +294,17 @@ textarea.form-control:focus {
   text-decoration: underline;
 }
 
-/* Responsive padding para formulario */
+/* Responsive para formulario */
 @media (max-width: 576px) {
   form {
     padding: 1rem;
     margin-bottom: 5rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .btn-secondary {
+    padding: 0.5rem 1rem;
+    font-size: 0.85rem;
   }
 }
